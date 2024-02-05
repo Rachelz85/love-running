@@ -213,6 +213,14 @@ hr {
     color: #3a3a3a;
 }
 
+/* Media query: larger or landscape photos (576px and up) */
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
+
 
 /* Media query: tablets and larger (768px and up) */
 @media screen and (min-width: 768px) {
@@ -274,6 +282,11 @@ hr {
         text-align: end;
         align-self: flex-end;
     }
+
+    /* Gallery Page */
+    #photos {
+        column-count: 3;
+    }
 }
 
 
@@ -283,34 +296,39 @@ hr {
         border-bottom: 1px solid #3a3a3a;
     }
 
-    /* Media query: screens 1200px and wider */
-    @media screen and (min-width: 1200px) {
-
-        /* Reason section */
-        #benefits {
-            display: flex;
-            flex-direction: row;
-        }
-
-        #benefits>div {
-            flex: 1;
-        }
-
-        #benefits-image {
-            order: 0;
-        }
-
-        #benefits-mental {
-            order: 1;
-        }
-
-        #benefits-mental>div {
-            align-self: flex-start;
-        }
-
-        #benefits-physical>div {
-            align-self: flex-end;
-        }
-
+    /* Gallery page */
+    #photos {
+        column-count: 4;
     }
+}
+
+/* Media query: screens 1200px and wider */
+@media screen and (min-width: 1200px) {
+
+    /* Reason section */
+    #benefits {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #benefits>div {
+        flex: 1;
+    }
+
+    #benefits-image {
+        order: 0;
+    }
+
+    #benefits-mental {
+        order: 1;
+    }
+
+    #benefits-mental>div {
+        align-self: flex-start;
+    }
+
+    #benefits-physical>div {
+        align-self: flex-end;
+    }
+
 }
